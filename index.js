@@ -18,7 +18,7 @@ for (const ticket of selectTickets){
             const td2 = document.createElement('td');
             const td3 = document.createElement('td');
             td1.innerText = ticket.innerText;
-            td2.innerText = 'Economoy';
+            td2.innerText = 'Economoy.';
             td3.innerText = 550;
             td3.classList.add('seat-price');
             tr.appendChild(td1);
@@ -51,7 +51,7 @@ for (const ticket of selectTickets){
 
         }
         else{
-            alert('limit exceeded');
+            alert('limit Exceeded!');
         }
             
           
@@ -79,11 +79,11 @@ for (const ticket of selectTickets){
             const couponField = document.getElementById('coupon-field');
             document.getElementById('coupon-apply-Btn').setAttribute('disabled', 'disabled');
             couponField.setAttribute('disabled', 'disabled');
-            couponField.setAttribute('title','Please select at least one seat to apply the coupon');
+            couponField.setAttribute('title','Please select at least one seat to apply the your coupon');
           
 
         }
-        // next button disable
+
 
         if(select.length === 0) {
              const nextButton = document.getElementById('next-button');
@@ -91,18 +91,18 @@ for (const ticket of selectTickets){
         }
        
         
-        // seat count
+        
         const seatCount = document.getElementById('seat-count');
 
         seatCount.innerText = select.length;
-        // left seat count
+        
         const seatLeft = document.getElementById('seat-left');
         seatLeft.innerText = 40-select.length;
 
  
     })
 }
-// next button function
+
 
 document.getElementById('phone-number').addEventListener('keyup', function(event){
     const numberValue = parseInt(event.target.value);
@@ -115,7 +115,6 @@ document.getElementById('phone-number').addEventListener('keyup', function(event
 })
 
 
-// key coupon
 
 document.getElementById('coupon-field').addEventListener('keyup',function(event){
     const coupon1 = document.getElementById('coupon1').innerText;
@@ -137,7 +136,7 @@ document.getElementById('coupon-field').addEventListener('keyup',function(event)
 });
 
 
-// coupon code 
+
 
 document.getElementById('coupon-apply-Btn').addEventListener('click',function(event){
 
@@ -152,9 +151,9 @@ document.getElementById('coupon-apply-Btn').addEventListener('click',function(ev
         
         const totalPrice = parseInt(price);
         
-        const discoutPrice = totalPrice*0.15;
-        discount.innerText = discoutPrice;
-        grandTotalPrice = grandTotalPrice-discoutPrice;
+        const discountPrice = totalPrice*0.15;
+        discount.innerText = discountPrice;
+        grandTotalPrice = grandTotalPrice-discountPrice;
         const grandPrice = document.getElementById('grand-price');
 
         grandPrice.innerText = grandTotalPrice;
@@ -170,9 +169,9 @@ document.getElementById('coupon-apply-Btn').addEventListener('click',function(ev
         const discount = document.getElementById('discount');
         const price =document.getElementById('total-price').innerText;
         const totalPrice = parseInt(price);
-        const discoutPrice = totalPrice*0.20;
-        discount.innerText = discoutPrice;
-        grandTotalPrice = grandTotalPrice-discoutPrice;        
+        const discountPrice = totalPrice*0.20;
+        discount.innerText = discountPrice;
+        grandTotalPrice = grandTotalPrice-discountPrice;        
         const grandPrice = document.getElementById('grand-price');
         grandPrice.innerText = grandTotalPrice;
         const node =  event.target.parentNode
